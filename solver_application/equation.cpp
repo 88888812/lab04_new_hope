@@ -2,7 +2,7 @@
 
 #include "formatter_ex.h"
 #include "solver.h"
-
+#include <sstream>
 int main()
 {
     float a = 0;
@@ -13,13 +13,14 @@ int main()
 
     float x1 = 0;
     float x2 = 0;
-
+    std::ostringstream s,e;
     try
     {
         solve(a, b, c, x1, x2);
-
-        formatter(std::cout, "x1 = " + std::to_string(x1));
-        formatter(std::cout, "x2 = " + std::to_string(x2));
+         s<<x1;
+         e<<x2;
+        formatter(std::cout, "x1 = " + s.str());
+        formatter(std::cout, "x2 = " + e.str());
     }
     catch (const std::logic_error& ex)
     {
