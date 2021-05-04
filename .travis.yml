@@ -21,10 +21,10 @@ script:
 - cmake --build _build
 - cmake --build _build --target hello_world
 - ./_build/hello_world
-- echo "Hello world application testing is done"
+- echo "Hello world application test"
 - cd ..
 - cd solver_application
 - cmake -H. -B_build
 - cmake --build _build
 - cmake --build _build --target solver
-- echo "Solver application testing is done"
+- echo "Solver application test"
